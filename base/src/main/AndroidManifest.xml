@@ -24,6 +24,7 @@
     <!-- TODO: Step 1.0, Review Permissions: Specify permissions you are using. -->
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"
         tools:ignore="CoarseFineLocation" />
+    <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
 
     <application
         android:allowBackup="true"
@@ -45,7 +46,8 @@
         <service
             android:name="com.example.android.whileinuselocation.ForegroundOnlyLocationService"
             android:enabled="true"
-            android:exported="false" />
+            android:exported="false"
+            android:foregroundServiceType="location"/>
     </application>
 
 </manifest>
